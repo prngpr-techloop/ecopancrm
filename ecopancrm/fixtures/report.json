@@ -1,0 +1,100 @@
+[
+ {
+  "add_total_row": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2025-04-09 10:29:42.225359",
+  "module": "EcopanCRM",
+  "name": "Report Formazione",
+  "prepared_report": 0,
+  "query": "SELECT id_parent as 'Codice Cliente',first_name as Nome,last_name as Cognome,corso_formazione as Formazione,formazione_ecopan  as Ecopan,data_formazione as data\n\nFROM  `tabEcopan Employee` as a\nINNER join `tabEcopan File Formazione` as b on a.parent=b.id_parent and b.id_child=a.name;",
+  "ref_doctype": "Ecopan Customer",
+  "reference_report": null,
+  "report_name": "Report Formazione",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Report Formazione",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Ecopan Admin"
+   },
+   {
+    "parent": "Report Formazione",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Ecopan Viewer"
+   },
+   {
+    "parent": "Report Formazione",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   },
+   {
+    "parent": "Report Formazione",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "All"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2025-04-09 15:17:46.601237",
+  "module": "EcopanCRM",
+  "name": "Report Visite Mediche",
+  "prepared_report": 0,
+  "query": "SELECT id_parent as 'Codice Cliente',first_name as Nome,last_name as Cognome,tipo_visita as 'Tipo Visita',commenti  as Commenti ,data_visita as Data\nFROM  `tabEcopan Employee` as a\nINNER join `tabEcopan Visite Mediche` as b on a.parent=b.id_parent and b.id_child=a.name;",
+  "ref_doctype": "Ecopan Customer",
+  "reference_report": null,
+  "report_name": "Report Visite Mediche",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Report Visite Mediche",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Ecopan Admin"
+   },
+   {
+    "parent": "Report Visite Mediche",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Ecopan Viewer"
+   },
+   {
+    "parent": "Report Visite Mediche",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   },
+   {
+    "parent": "Report Visite Mediche",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "All"
+   }
+  ],
+  "timeout": 0
+ }
+]

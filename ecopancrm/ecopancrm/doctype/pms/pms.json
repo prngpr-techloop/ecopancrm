@@ -1,0 +1,791 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-04 10:55:35.595676",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_impianto_attivita",
+  "section_info_generali",
+  "data",
+  "oggetto_intervento",
+  "committente",
+  "odl",
+  "denominazione_impianto",
+  "indirizzo_cantiere",
+  "comune",
+  "section_tipologia",
+  "tipo_vasca_aperta",
+  "tipo_vasca_chiusa",
+  "tipo_isf",
+  "tipo_pozzetti",
+  "tipo_altro_check",
+  "tipo_altro_testo",
+  "section_accessi",
+  "accesso_scala",
+  "accesso_botola",
+  "accesso_chiusino",
+  "accesso_altro_check",
+  "accesso_altro_testo",
+  "dimensioni",
+  "section_impedimenti",
+  "impedimenti_tubazioni",
+  "impedimenti_pompe",
+  "impedimenti_apparecchiature",
+  "impedimenti_altro_check",
+  "impedimenti_altro_testo",
+  "col_break_1",
+  "illuminazione",
+  "scala_accesso",
+  "liquami",
+  "strutture_ammalorate",
+  "intercettazione_flussi",
+  "interferenze",
+  "interferenze_dettagli",
+  "section_attrezzature",
+  "attrezzature_mezzi",
+  "operatori",
+  "section_dpi",
+  "dpi",
+  "dpi_spazi_confinati",
+  "section_fasi",
+  "fasi_attivita",
+  "section_descrizione_impianto",
+  "testo_descrizione_html",
+  "col_break_desc1",
+  "via_sollevamento",
+  "ubicato_pressi",
+  "section_caratteristiche",
+  "impianto_muratura_accesso_agevole",
+  "vasca_cielo_aperto_rampe",
+  "serbatoio_silos_passo_uomo",
+  "impianto_chiuso_sotto_strada",
+  "presenza_scale_ammalorate",
+  "illuminazione_insufficiente",
+  "ventilazione_inadeguata",
+  "section_viabilita",
+  "impianto_recintato_sosta_mezzi",
+  "impianto_sede_stradale_interferenze",
+  "necessaria_segnaletica_stradale",
+  "section_attivita",
+  "svuotamento_pulizia_esterno",
+  "svuotamento_pulizia_interno",
+  "section_stato_luoghi",
+  "presenza_liquami_luoghi",
+  "presenza_ostacoli_luoghi",
+  "altro_stato_luoghi",
+  "section_procedure_preliminari",
+  "svuotamento_pulizia_esterno_proc",
+  "accesso_imbragatura_operatori",
+  "strutture_accesso_ammalorate",
+  "aprire_botole_arieggiare",
+  "accesso_vasca_messa_sicurezza",
+  "section_emergenze",
+  "spazi_idonei_treppiedi",
+  "spazi_ostacoli_impedimenti",
+  "col_break_emergenze",
+  "procedura_emergenza_sistemi_alternativi",
+  "argano_verricello_emergenza",
+  "autogru",
+  "ple_braccio_negativo",
+  "gru_bandiera",
+  "altro_emergenze",
+  "altre_caratteristiche",
+  "section_classificazione_spazi",
+  "tabella_classificazione_html",
+  "col_break_classificazione",
+  "classificazione_a",
+  "classificazione_b",
+  "classificazione_c",
+  "note_classificazione",
+  "note_descrizione",
+  "section_gestione_emergenze",
+  "tabella_non_ingresso_html",
+  "col_break_emergenze_numeri",
+  "numero_lavoratori_spazio_confinato",
+  "numero_addetti_salvataggio_esterno",
+  "numero_addetti_squadra_salvataggio",
+  "section_scelta_salvataggio",
+  "testo_scelta_salvataggio_html",
+  "soluzione_recupero_esterno",
+  "testo_recupero_esterno_html",
+  "recupero_treppiedi_emergenza",
+  "recupero_gru_bandiera",
+  "recupero_verricello_autospurgo",
+  "recupero_autogru",
+  "recupero_ple_negativo",
+  "recupero_altro_check",
+  "recupero_altro_testo",
+  "testo_condizioni_recupero_html",
+  "col_break_squadra",
+  "soluzione_squadra_salvataggio",
+  "testo_squadra_salvataggio_html",
+  "note_gestione_emergenze"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_info_generali",
+   "fieldtype": "Section Break",
+   "label": "Informazioni Generali"
+  },
+  {
+   "fieldname": "data",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Data",
+   "reqd": 1
+  },
+  {
+   "fieldname": "oggetto_intervento",
+   "fieldtype": "Data",
+   "label": "Oggetto dell'intervento da effettuare (descrizione)"
+  },
+  {
+   "fieldname": "committente",
+   "fieldtype": "Data",
+   "label": "Committente"
+  },
+  {
+   "fieldname": "odl",
+   "fieldtype": "Data",
+   "label": "ODL"
+  },
+  {
+   "fieldname": "denominazione_impianto",
+   "fieldtype": "Data",
+   "label": "Denominazione impianto ISF"
+  },
+  {
+   "fieldname": "indirizzo_cantiere",
+   "fieldtype": "Data",
+   "label": "Indirizzo cantiere"
+  },
+  {
+   "fieldname": "comune",
+   "fieldtype": "Data",
+   "label": "Comune"
+  },
+  {
+   "fieldname": "section_tipologia",
+   "fieldtype": "Section Break",
+   "label": "Tipologia Spazio Confinato"
+  },
+  {
+   "default": "0",
+   "fieldname": "tipo_vasca_aperta",
+   "fieldtype": "Check",
+   "label": "vasca a cielo aperto"
+  },
+  {
+   "default": "0",
+   "fieldname": "tipo_vasca_chiusa",
+   "fieldtype": "Check",
+   "label": "vasca chiusa"
+  },
+  {
+   "default": "0",
+   "fieldname": "tipo_isf",
+   "fieldtype": "Check",
+   "label": "ISF"
+  },
+  {
+   "default": "0",
+   "fieldname": "tipo_pozzetti",
+   "fieldtype": "Check",
+   "label": "pozzetti d'ispezione"
+  },
+  {
+   "default": "0",
+   "fieldname": "tipo_altro_check",
+   "fieldtype": "Check",
+   "label": "altro"
+  },
+  {
+   "depends_on": "eval:doc.tipo_altro_check == 1",
+   "fieldname": "tipo_altro_testo",
+   "fieldtype": "Data",
+   "label": "Altro - specificare"
+  },
+  {
+   "fieldname": "section_accessi",
+   "fieldtype": "Section Break",
+   "label": "Accessi agli Spazi"
+  },
+  {
+   "default": "0",
+   "fieldname": "accesso_scala",
+   "fieldtype": "Check",
+   "label": "scala con corrimano"
+  },
+  {
+   "default": "0",
+   "fieldname": "accesso_botola",
+   "fieldtype": "Check",
+   "label": "botola / tombino e scala marinara"
+  },
+  {
+   "default": "0",
+   "fieldname": "accesso_chiusino",
+   "fieldtype": "Check",
+   "label": "chiusino"
+  },
+  {
+   "default": "0",
+   "fieldname": "accesso_altro_check",
+   "fieldtype": "Check",
+   "label": "altro"
+  },
+  {
+   "depends_on": "eval:doc.accesso_altro_check == 1",
+   "fieldname": "accesso_altro_testo",
+   "fieldtype": "Data",
+   "label": "Altro accesso - specificare"
+  },
+  {
+   "fieldname": "dimensioni",
+   "fieldtype": "Data",
+   "label": "Dimensioni"
+  },
+  {
+   "fieldname": "section_impedimenti",
+   "fieldtype": "Section Break",
+   "label": "Impedimenti e Caratteristiche"
+  },
+  {
+   "default": "0",
+   "fieldname": "impedimenti_tubazioni",
+   "fieldtype": "Check",
+   "label": "Tubazioni"
+  },
+  {
+   "default": "0",
+   "fieldname": "impedimenti_pompe",
+   "fieldtype": "Check",
+   "label": "Pompe"
+  },
+  {
+   "default": "0",
+   "fieldname": "impedimenti_apparecchiature",
+   "fieldtype": "Check",
+   "label": "Apparecchiature"
+  },
+  {
+   "default": "0",
+   "fieldname": "impedimenti_altro_check",
+   "fieldtype": "Check",
+   "label": "Altro"
+  },
+  {
+   "depends_on": "eval:doc.impedimenti_altro_check == 1",
+   "fieldname": "impedimenti_altro_testo",
+   "fieldtype": "Data",
+   "label": "Altri impedimenti - specificare"
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "illuminazione",
+   "fieldtype": "Check",
+   "label": "Necessit\u00e0 di illuminazione artificiale"
+  },
+  {
+   "default": "0",
+   "fieldname": "scala_accesso",
+   "fieldtype": "Check",
+   "label": "Presenza di scala di accesso"
+  },
+  {
+   "default": "0",
+   "fieldname": "liquami",
+   "fieldtype": "Check",
+   "label": "Presenza di liquami all'interno"
+  },
+  {
+   "default": "0",
+   "fieldname": "strutture_ammalorate",
+   "fieldtype": "Check",
+   "label": "Presenza di strutture ammalorate"
+  },
+  {
+   "default": "0",
+   "fieldname": "intercettazione_flussi",
+   "fieldtype": "Check",
+   "label": "Necessit\u00e0 di intercettazione flussi"
+  },
+  {
+   "default": "0",
+   "fieldname": "interferenze",
+   "fieldtype": "Check",
+   "label": "Sono previste interferenze con altre attivit\u00e0/aziende"
+  },
+  {
+   "depends_on": "eval:doc.interferenze == 1",
+   "fieldname": "interferenze_dettagli",
+   "fieldtype": "Data",
+   "label": "Dettagli interferenze"
+  },
+  {
+   "fieldname": "section_attrezzature",
+   "fieldtype": "Section Break",
+   "label": "Attrezzature e Mezzi"
+  },
+  {
+   "fieldname": "attrezzature_mezzi",
+   "fieldtype": "Data",
+   "label": "Attrezzature / mezzi da utilizzare (numero e tipologia)"
+  },
+  {
+   "fieldname": "operatori",
+   "fieldtype": "Data",
+   "label": "Operatori"
+  },
+  {
+   "fieldname": "section_dpi",
+   "fieldtype": "Section Break",
+   "label": "Dispositivi di Protezione Individuale"
+  },
+  {
+   "fieldname": "dpi",
+   "fieldtype": "Data",
+   "label": "D.P.I."
+  },
+  {
+   "fieldname": "dpi_spazi_confinati",
+   "fieldtype": "Data",
+   "label": "DPI e dispositivi per spazi confinati"
+  },
+  {
+   "fieldname": "section_fasi",
+   "fieldtype": "Section Break",
+   "label": "Fasi dell'Attivit\u00e0"
+  },
+  {
+   "fieldname": "fasi_attivita",
+   "fieldtype": "Data",
+   "label": "Fasi dell'attivit\u00e0 da eseguire"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_impianto_attivita",
+   "fieldtype": "Section Break",
+   "label": "IMPIANTO E DESCRIZIONE DELL'ATTIVITA'"
+  },
+  {
+   "fieldname": "section_descrizione_impianto",
+   "fieldtype": "Section Break",
+   "label": "Descrizione Impianto"
+  },
+  {
+   "fieldname": "testo_descrizione_html",
+   "fieldtype": "HTML",
+   "options": "\n            <div style=\"background-color: #f8f9fa; padding: 20px; border: 1px solid #dee2e6; border-radius: 8px; margin: 15px 0; font-family: Arial, sans-serif;\">\n                <h4 style=\"color: #495057; margin-bottom: 15px; border-bottom: 2px solid #007bff; padding-bottom: 5px;\">DESCRIZIONE IMPIANTO</h4>\n                \n                <p style=\"margin: 15px 0; line-height: 1.8; text-align: justify;\">\n                    I lavori in programma consistono nella pulizia interna della vasca del sollevamento e nell'estrazione di due pompe che risultano bloccate. Il sollevamento, sito in via \n                    <span style=\"background-color: #fff3cd; padding: 3px 10px; border: 2px dashed #856404; margin: 0 3px; min-width: 150px; display: inline-block; text-align: center;\">_________________</span>\n                    \u00e8 ubicato nei pressi \n                    <span style=\"background-color: #fff3cd; padding: 3px 10px; border: 2px dashed #856404; margin: 0 3px; min-width: 150px; display: inline-block; text-align: center;\">_________________</span>\n                    ed \u00e8 composto da un solaio intermedio interrato a cui si accede dal piano stradale tramite 4 chiusini in ghisa divisi a spicchi. Sul solaio intermedio sono ricavate ulteriori 4 aperture in corrispondenza delle pompe di sollevamento.\n                </p>\n                \n                <h5 style=\"color: #495057; margin: 20px 0 10px 0; font-weight: bold;\">Il cronoprogramma dei lavori sar\u00e0 il seguente:</h5>\n                <ul style=\"margin: 10px 0 10px 20px; line-height: 1.6;\">\n                    <li style=\"margin: 8px 0;\">isolamento della vasca tramite pallone e chiusura paratoia di esclusione</li>\n                    <li style=\"margin: 8px 0;\">pulizia in spazi confinati della vasca</li>\n                    <li style=\"margin: 8px 0;\">sollevamento e pulizia della P3</li>\n                    <li style=\"margin: 8px 0;\">sollevamento della girante P4 mandata in riparazione e rimasta sul fondo</li>\n                    <li style=\"margin: 8px 0;\">ripristino dei tubi guida P4</li>\n                    <li style=\"margin: 8px 0;\">installazione e collegamento P4 di scorta presente nel sollevamento</li>\n                </ul>\n            </div>\n            "
+  },
+  {
+   "fieldname": "col_break_desc1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "via_sollevamento",
+   "fieldtype": "Data",
+   "label": "Via del sollevamento"
+  },
+  {
+   "fieldname": "ubicato_pressi",
+   "fieldtype": "Data",
+   "label": "Ubicato nei pressi di"
+  },
+  {
+   "fieldname": "section_caratteristiche",
+   "fieldtype": "Section Break",
+   "label": "Caratteristiche"
+  },
+  {
+   "default": "0",
+   "fieldname": "impianto_muratura_accesso_agevole",
+   "fieldtype": "Check",
+   "label": "Impianto in struttura in muratura con accesso agevole (porte, etc.)"
+  },
+  {
+   "default": "0",
+   "fieldname": "vasca_cielo_aperto_rampe",
+   "fieldtype": "Check",
+   "label": "Vasca a cielo aperto dotata di rampe e passerelle con accesso da attrezzare"
+  },
+  {
+   "default": "0",
+   "fieldname": "serbatoio_silos_passo_uomo",
+   "fieldtype": "Check",
+   "label": "Serbatoio, silos con accesso consentito da passo d'uomo in prossimit\u00e0 del livello stradale"
+  },
+  {
+   "default": "0",
+   "fieldname": "impianto_chiuso_sotto_strada",
+   "fieldtype": "Check",
+   "label": "Impianto chiuso sotto sede stradale (accesso botole, imbragatura operatori)"
+  },
+  {
+   "default": "0",
+   "fieldname": "presenza_scale_ammalorate",
+   "fieldtype": "Check",
+   "label": "Scale, rampe, parapetti in cattivo stato - strutture ammalorate"
+  },
+  {
+   "default": "0",
+   "fieldname": "illuminazione_insufficiente",
+   "fieldtype": "Check",
+   "label": "illuminazione insufficiente"
+  },
+  {
+   "default": "0",
+   "fieldname": "ventilazione_inadeguata",
+   "fieldtype": "Check",
+   "label": "ventilazione inadeguata"
+  },
+  {
+   "fieldname": "section_viabilita",
+   "fieldtype": "Section Break",
+   "label": "Viabilit\u00e0"
+  },
+  {
+   "default": "0",
+   "fieldname": "impianto_recintato_sosta_mezzi",
+   "fieldtype": "Check",
+   "label": "Impianto con struttura recintata / area per sosta mezzi senza intralcio al traffico"
+  },
+  {
+   "default": "0",
+   "fieldname": "impianto_sede_stradale_interferenze",
+   "fieldtype": "Check",
+   "label": "Impianto su sede stradale con interferenze traffico urbano/extraurbano"
+  },
+  {
+   "default": "0",
+   "fieldname": "necessaria_segnaletica_stradale",
+   "fieldtype": "Check",
+   "label": "Necessaria predisposizione segnaletica stradale secondo schema DM 10/07/2012"
+  },
+  {
+   "fieldname": "section_attivita",
+   "fieldtype": "Section Break",
+   "label": "Attivit\u00e0"
+  },
+  {
+   "default": "0",
+   "fieldname": "svuotamento_pulizia_esterno",
+   "fieldtype": "Check",
+   "label": "svuotamento e pulizia della vasca dall'esterno"
+  },
+  {
+   "default": "0",
+   "fieldname": "svuotamento_pulizia_interno",
+   "fieldtype": "Check",
+   "label": "Svuotamento e pulizia vasca dall'interno (spazio confinato)"
+  },
+  {
+   "fieldname": "section_stato_luoghi",
+   "fieldtype": "Section Break",
+   "label": "Stato luoghi"
+  },
+  {
+   "default": "0",
+   "fieldname": "presenza_liquami_luoghi",
+   "fieldtype": "Check",
+   "label": "presenza liquami"
+  },
+  {
+   "default": "0",
+   "fieldname": "presenza_ostacoli_luoghi",
+   "fieldtype": "Check",
+   "label": "presenza ostacoli (pompe, tubazioni, etc.)"
+  },
+  {
+   "fieldname": "altro_stato_luoghi",
+   "fieldtype": "Data",
+   "label": "altro"
+  },
+  {
+   "fieldname": "section_procedure_preliminari",
+   "fieldtype": "Section Break",
+   "label": "Procedure preliminari"
+  },
+  {
+   "default": "0",
+   "fieldname": "svuotamento_pulizia_esterno_proc",
+   "fieldtype": "Check",
+   "label": "Svuotamento e pulizia della vasca dall'esterno"
+  },
+  {
+   "default": "0",
+   "fieldname": "accesso_imbragatura_operatori",
+   "fieldtype": "Check",
+   "label": "Accesso con imbragatura operatori e fune recupero su treppiedi"
+  },
+  {
+   "default": "0",
+   "fieldname": "strutture_accesso_ammalorate",
+   "fieldtype": "Check",
+   "label": "Strutture di accesso ammalorate (scale)"
+  },
+  {
+   "default": "0",
+   "fieldname": "aprire_botole_arieggiare",
+   "fieldtype": "Check",
+   "label": "Aprire botole/tombini per arieggiare e migliorare visibilit\u00e0"
+  },
+  {
+   "default": "0",
+   "fieldname": "accesso_vasca_messa_sicurezza",
+   "fieldtype": "Check",
+   "label": "Accesso vasca dopo messa in sicurezza (disalimentazione, intercettazione flussi)"
+  },
+  {
+   "fieldname": "section_emergenze",
+   "fieldtype": "Section Break",
+   "label": "Emergenze"
+  },
+  {
+   "default": "0",
+   "fieldname": "spazi_idonei_treppiedi",
+   "fieldtype": "Check",
+   "label": "Spazi idonei all'utilizzo del treppiedi per recupero di emergenza"
+  },
+  {
+   "default": "0",
+   "fieldname": "spazi_ostacoli_impedimenti",
+   "fieldtype": "Check",
+   "label": "Spazi con ostacoli che impediscono treppiedi (accesso squadra emergenza)"
+  },
+  {
+   "fieldname": "col_break_emergenze",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "procedura_emergenza_sistemi_alternativi",
+   "fieldtype": "Check",
+   "label": "Procedura emergenza con sistemi alternativi (specificare sotto)"
+  },
+  {
+   "default": "0",
+   "fieldname": "argano_verricello_emergenza",
+   "fieldtype": "Check",
+   "label": "argano / verricello di emergenza bordo mezzo"
+  },
+  {
+   "default": "0",
+   "fieldname": "autogru",
+   "fieldtype": "Check",
+   "label": "autogr\u00f9"
+  },
+  {
+   "default": "0",
+   "fieldname": "ple_braccio_negativo",
+   "fieldtype": "Check",
+   "label": "PLE a braccio negativo"
+  },
+  {
+   "default": "0",
+   "fieldname": "gru_bandiera",
+   "fieldtype": "Check",
+   "label": "Gru a bandiera"
+  },
+  {
+   "fieldname": "altro_emergenze",
+   "fieldtype": "Data",
+   "label": "altro"
+  },
+  {
+   "fieldname": "altre_caratteristiche",
+   "fieldtype": "Text Editor",
+   "label": "Altre caratteristiche dell'impianto"
+  },
+  {
+   "fieldname": "section_classificazione_spazi",
+   "fieldtype": "Section Break",
+   "label": "Tabella di Classificazione degli Spazi Confinati"
+  },
+  {
+   "fieldname": "tabella_classificazione_html",
+   "fieldtype": "HTML",
+   "options": "\n            <div style=\"background-color: #f8f9fa; padding: 20px; border: 1px solid #dee2e6; border-radius: 8px; margin: 15px 0;\">\n                <h4 style=\"text-align: center; margin-bottom: 20px; color: #495057;\">Tabella di Classificazione degli Spazi Confinati</h4>\n                \n                <table style=\"width: 100%; border-collapse: collapse; font-size: 13px; background-color: white;\">\n                    <thead>\n                        <tr style=\"background-color: #6c757d; color: white;\">\n                            <th style=\"border: 1px solid #333; padding: 12px; text-align: center; width: 15%;\"></th>\n                            <th style=\"border: 1px solid #333; padding: 12px; text-align: center; width: 28%;\">Classe A</th>\n                            <th style=\"border: 1px solid #333; padding: 12px; text-align: center; width: 28%;\">Classe B</th>\n                            <th style=\"border: 1px solid #333; padding: 12px; text-align: center; width: 29%;\">Classe C</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr>\n                            <td style=\"border: 1px solid #333; padding: 12px; font-weight: bold; background-color: #e9ecef; text-align: center;\">Caratteristiche</td>\n                            <td style=\"border: 1px solid #333; padding: 12px; line-height: 1.4;\">Uno spazio confinato che presenta un alto e immediato rischio per la salute e la vita del lavoratore. Include la mancanza di ossigeno, presenza di atmosfere infiammabili o esplosive, alte concentrazioni di sostanze tossiche (IDLH \u2013 immediately dangerous to life or health).</td>\n                            <td style=\"border: 1px solid #333; padding: 12px; line-height: 1.4;\">Spazio confinato che pu\u00f2 portare a situazioni di infortunio se non vengono adottate misure preventive, ma non \u00e8 immediatamente pericoloso per la vita e la salute.</td>\n                            <td style=\"border: 1px solid #333; padding: 12px; line-height: 1.4;\">Spazio confinato in cui il rischio \u00e8 trascurabile, non influisce sul normale svolgimento del lavoro e non \u00e8 prevedibile un peggioramento.</td>\n                        </tr>\n                        <tr>\n                            <td style=\"border: 1px solid #333; padding: 12px; font-weight: bold; background-color: #e9ecef; text-align: center;\">Ossigeno</td>\n                            <td style=\"border: 1px solid #333; padding: 12px; text-align: center;\">%O\u2082 \u2264 18 oppure &gt; 25</td>\n                            <td style=\"border: 1px solid #333; padding: 12px; text-align: center;\">18 &lt; %O\u2082 &lt; 20<br>21.5 &lt; %O\u2082 \u2264 25</td>\n                            <td style=\"border: 1px solid #333; padding: 12px; text-align: center;\">20 \u2264 %O\u2082 \u2264 21.5</td>\n                        </tr>\n                        <tr>\n                            <td style=\"border: 1px solid #333; padding: 12px; font-weight: bold; background-color: #e9ecef; text-align: center;\">Esplodibilit\u00e0</td>\n                            <td style=\"border: 1px solid #333; padding: 12px; text-align: center;\">Uguale o superiore al 20% del LIE</td>\n                            <td style=\"border: 1px solid #333; padding: 12px; text-align: center;\">Dal 10% al 19% del LIE</td>\n                            <td style=\"border: 1px solid #333; padding: 12px; text-align: center;\">Uguale o inferiore al 10% del LIE</td>\n                        </tr>\n                        <tr>\n                            <td style=\"border: 1px solid #333; padding: 12px; font-weight: bold; background-color: #e9ecef; text-align: center;\">Tossicit\u00e0</td>\n                            <td style=\"border: 1px solid #333; padding: 12px; text-align: center;\">&gt; IDLH</td>\n                            <td style=\"border: 1px solid #333; padding: 12px; text-align: center;\">Superiore o uguale al VLE (TLV) ma inferiore a IDLH</td>\n                            <td style=\"border: 1px solid #333; padding: 12px; text-align: center;\">Inferiore al VLE (TLV)</td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n            "
+  },
+  {
+   "fieldname": "col_break_classificazione",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "classificazione_a",
+   "fieldtype": "Check",
+   "label": "A"
+  },
+  {
+   "default": "0",
+   "fieldname": "classificazione_b",
+   "fieldtype": "Check",
+   "label": "B"
+  },
+  {
+   "default": "0",
+   "fieldname": "classificazione_c",
+   "fieldtype": "Check",
+   "label": "C"
+  },
+  {
+   "fieldname": "note_classificazione",
+   "fieldtype": "Data",
+   "label": "Note sulla classificazione"
+  },
+  {
+   "fieldname": "note_descrizione",
+   "fieldtype": "Text Editor",
+   "label": "Note e osservazioni"
+  },
+  {
+   "fieldname": "section_gestione_emergenze",
+   "fieldtype": "Section Break",
+   "label": "Gestione delle Emergenze"
+  },
+  {
+   "fieldname": "tabella_non_ingresso_html",
+   "fieldtype": "HTML",
+   "options": "\n            <div style=\"background-color: #f8f9fa; padding: 20px; border: 1px solid #dee2e6; border-radius: 8px; margin: 15px 0;\">\n                <h4 style=\"text-align: center; margin-bottom: 15px; color: #495057;\">Tecnica di accessibilit\u00e0 / salvataggio per il sistema \"non ingresso di salvataggio\"</h4>\n                \n                <table style=\"width: 100%; border-collapse: collapse; font-size: 13px; background-color: white; margin-bottom: 20px;\">\n                    <thead>\n                        <tr style=\"background-color: #6c757d; color: white;\">\n                            <th style=\"border: 1px solid #333; padding: 8px; text-align: left; width: 50%;\">numero di lavoratori operanti all'interno del luogo confinato</th>\n                            <th style=\"border: 1px solid #333; padding: 8px; text-align: center; width: 8%;\">1</th>\n                            <th style=\"border: 1px solid #333; padding: 8px; text-align: center; width: 8%;\">2</th>\n                            <th style=\"border: 1px solid #333; padding: 8px; text-align: center; width: 8%;\">3</th>\n                            <th style=\"border: 1px solid #333; padding: 8px; text-align: center; width: 8%;\">4*</th>\n                            <th style=\"border: 1px solid #333; padding: 8px; text-align: center; width: 8%;\">5*</th>\n                            <th style=\"border: 1px solid #333; padding: 8px; text-align: center; width: 10%;\">6*</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr>\n                            <td style=\"border: 1px solid #333; padding: 8px; font-weight: bold;\">Numero minimo di addetti al salvataggio</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">2</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">3</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">4</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">5</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">6</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">7</td>\n                        </tr>\n                        <tr>\n                            <td style=\"border: 1px solid #333; padding: 8px; font-weight: bold;\">Numero minimo di addetti al salvataggio raccomandati</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">3</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">3</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">5</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">6</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">7</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">8</td>\n                        </tr>\n                    </tbody>\n                </table>\n                <p style=\"font-size: 11px; font-style: italic; margin: 5px 0;\">* casi ritenuti poco probabili nella pratica</p>\n                \n                <h4 style=\"text-align: center; margin: 25px 0 15px 0; color: #495057;\">Tecnica di accessibilit\u00e0 / salvataggio per il sistema ad \"entrata di salvataggio\"</h4>\n                \n                <table style=\"width: 100%; border-collapse: collapse; font-size: 13px; background-color: white;\">\n                    <thead>\n                        <tr style=\"background-color: #6c757d; color: white;\">\n                            <th style=\"border: 1px solid #333; padding: 8px; text-align: left; width: 50%;\">Numero di lavoratori operanti all'interno del luogo confinato</th>\n                            <th style=\"border: 1px solid #333; padding: 8px; text-align: center; width: 8%;\">1</th>\n                            <th style=\"border: 1px solid #333; padding: 8px; text-align: center; width: 8%;\">2</th>\n                            <th style=\"border: 1px solid #333; padding: 8px; text-align: center; width: 8%;\">3</th>\n                            <th style=\"border: 1px solid #333; padding: 8px; text-align: center; width: 8%;\">4</th>\n                            <th style=\"border: 1px solid #333; padding: 8px; text-align: center; width: 8%;\">5</th>\n                            <th style=\"border: 1px solid #333; padding: 8px; text-align: center; width: 10%;\">6</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr style=\"background-color: #e9ecef;\">\n                            <td style=\"border: 1px solid #333; padding: 8px; font-weight: bold;\" colspan=\"7\">Numero minimo di addetti :</td>\n                        </tr>\n                        <tr>\n                            <td style=\"border: 1px solid #333; padding: 8px;\">al salvataggio all'esterno dello spazio confinato - compreso il Responsabile</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">2</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">3</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">3</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">4</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">4</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">4</td>\n                        </tr>\n                        <tr>\n                            <td style=\"border: 1px solid #333; padding: 8px;\">al salvataggio che possono entrare nel spazio confinato (squadra di salvataggio)</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">2</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">4</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">6</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">6</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">6</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">6</td>\n                        </tr>\n                        <tr style=\"background-color: #e9ecef;\">\n                            <td style=\"border: 1px solid #333; padding: 8px; font-weight: bold;\" colspan=\"7\">Numero* minimo di addetti raccomandati</td>\n                        </tr>\n                        <tr>\n                            <td style=\"border: 1px solid #333; padding: 8px;\">al salvataggio all'esterno dello spazio confinato - compreso il Responsabile</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">3</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">4</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">4</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">4</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">4</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">4</td>\n                        </tr>\n                        <tr>\n                            <td style=\"border: 1px solid #333; padding: 8px;\">al salvataggio che possono entrare nel spazio confinato (squadra di salvataggio)</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">3</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">4</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">6</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">7</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">7</td>\n                            <td style=\"border: 1px solid #333; padding: 8px; text-align: center;\">8</td>\n                        </tr>\n                    </tbody>\n                </table>\n                <p style=\"font-size: 11px; font-style: italic; margin: 10px 0; line-height: 1.4;\">* In ragione della natura del luogo confinato e delle difficolt\u00e0 di salvataggio, il numero dei soccorritori da prevedere teoricamente pu\u00f2 significativamente lievitare. Ad esempio nel caso in cui da un trasportato all'interno non collaborante e contemporaneamente somministrare allo stesso aria, occorrono tre persone, di cui due addette al trasporto ed una che fornisce l'aria.</p>\n            </div>\n            "
+  },
+  {
+   "fieldname": "col_break_emergenze_numeri",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "numero_lavoratori_spazio_confinato",
+   "fieldtype": "Int",
+   "label": "Numero di lavoratori operanti all'interno dello spazio confinato"
+  },
+  {
+   "fieldname": "numero_addetti_salvataggio_esterno",
+   "fieldtype": "Int",
+   "label": "Numero addetti salvataggio all'esterno"
+  },
+  {
+   "fieldname": "numero_addetti_squadra_salvataggio",
+   "fieldtype": "Int",
+   "label": "Numero addetti squadra di salvataggio (possono entrare)"
+  },
+  {
+   "fieldname": "section_scelta_salvataggio",
+   "fieldtype": "Section Break",
+   "label": "Scelta Soluzione di Salvataggio"
+  },
+  {
+   "fieldname": "testo_scelta_salvataggio_html",
+   "fieldtype": "HTML",
+   "options": "\n            <div style=\"background-color: #e3f2fd; padding: 15px; border-left: 4px solid #1976d2; margin: 10px 0;\">\n                <p style=\"margin: 5px 0; font-weight: bold; color: #1565c0;\">\n                    In caso di malessere di un operatore all'interno del luogo confinato \u00e8 necessario che la squadra sappia preventivamente come agir\u00e0 per salvare il collega. A tal scopo l'impresa dovr\u00e0 scegliere una tra le due soluzioni di salvataggio di seguito proposte:\n                </p>\n            </div>\n            "
+  },
+  {
+   "default": "0",
+   "fieldname": "soluzione_recupero_esterno",
+   "fieldtype": "Check",
+   "label": "RECUPERO DALL'ESTERNO"
+  },
+  {
+   "fieldname": "testo_recupero_esterno_html",
+   "fieldtype": "HTML",
+   "options": "\n            <div style=\"background-color: #fff3e0; padding: 15px; border: 1px solid #ff9800; border-radius: 5px; margin: 10px 0;\">\n                <p style=\"margin: 10px 0; font-weight: bold;\">Consiste nel recupero dell'infortunato operando dall'esterno con utilizzo di:</p>\n            </div>\n            "
+  },
+  {
+   "default": "0",
+   "fieldname": "recupero_treppiedi_emergenza",
+   "fieldtype": "Check",
+   "label": "Treppiedi di emergenza"
+  },
+  {
+   "default": "0",
+   "fieldname": "recupero_gru_bandiera",
+   "fieldtype": "Check",
+   "label": "Gru a bandiera"
+  },
+  {
+   "default": "0",
+   "fieldname": "recupero_verricello_autospurgo",
+   "fieldtype": "Check",
+   "label": "Verricello in dotazione dell'autospurgo (in deroga per emergenza)"
+  },
+  {
+   "default": "0",
+   "fieldname": "recupero_autogru",
+   "fieldtype": "Check",
+   "label": "Autogr\u00f9 (in deroga per emergenza in particolari condizioni logistiche)"
+  },
+  {
+   "default": "0",
+   "fieldname": "recupero_ple_negativo",
+   "fieldtype": "Check",
+   "label": "PLE a sviluppo negativo"
+  },
+  {
+   "default": "0",
+   "fieldname": "recupero_altro_check",
+   "fieldtype": "Check",
+   "label": "Altro"
+  },
+  {
+   "depends_on": "eval:doc.recupero_altro_check == 1",
+   "fieldname": "recupero_altro_testo",
+   "fieldtype": "Data",
+   "label": "Altro (specificare)"
+  },
+  {
+   "fieldname": "testo_condizioni_recupero_html",
+   "fieldtype": "HTML",
+   "options": "\n            <div style=\"background-color: #fff8e1; padding: 10px; border-left: 3px solid #ffc107; margin: 10px 0;\">\n                <p style=\"margin: 5px 0; font-style: italic;\">\n                    <strong>Affinch\u00e9 ci\u00f2 sia possibile</strong> il lavoratore all'interno dello spazio deve sempre operare rimanendo agganciato alla fune di recupero e svolgere attivit\u00e0 a vista del preposto e della squadra di emergenza.\n                </p>\n            </div>\n            "
+  },
+  {
+   "fieldname": "col_break_squadra",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "soluzione_squadra_salvataggio",
+   "fieldtype": "Check",
+   "label": "SQUADRA DI SALVATAGGIO"
+  },
+  {
+   "fieldname": "testo_squadra_salvataggio_html",
+   "fieldtype": "HTML",
+   "options": "\n            <div style=\"background-color: #ffebee; padding: 15px; border: 1px solid #f44336; border-radius: 5px; margin: 10px 0;\">\n                <p style=\"margin: 10px 0; line-height: 1.6;\">\n                    <strong>Consiste nel recupero dell'infortunato con uno o pi\u00f9 operatori che entrano all'interno dello spazio confinato.</strong>\n                </p>\n                <p style=\"margin: 10px 0; line-height: 1.6;\">\n                    Gli addetti della squadra di emergenza accedono al piano vasca per mezzo dell'accesso ricavato per le normali attivit\u00e0 (scala, passerella, etc). L'operatore che entra nello spazio per salvare il collega deve essere munito di <strong>tuta integrale e maschera a pieno facciale A2B2E2K2 P3</strong>.\n                </p>\n                <p style=\"margin: 10px 0; line-height: 1.6;\">\n                    Una volta dentro, il soccorritore rimuove gli eventuali impedimenti che ostacolano il recupero dell'infortunato o lo trascina fino al punto in cui \u00e8 possibile agganciarlo alla fune di recupero e sollevarlo con il treppiede (o sistema alternativo) posizionato allo scopo.\n                </p>\n                <p style=\"margin: 10px 0; line-height: 1.6; background-color: #ffcdd2; padding: 8px; border-radius: 3px;\">\n                    <strong>\u26a0\ufe0f IMPORTANTE:</strong> Qualora si scelga questa opzione, il collega adibito al salvataggio deve essere fin dall'inizio pronto con i DPI necessari all'immediato intervento.\n                </p>\n            </div>\n            "
+  },
+  {
+   "fieldname": "note_gestione_emergenze",
+   "fieldtype": "Text Editor",
+   "label": "Note aggiuntive sulla gestione delle emergenze"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-04 17:50:47.896107",
+ "modified_by": "Administrator",
+ "module": "EcopanCRM",
+ "name": "PMS",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
