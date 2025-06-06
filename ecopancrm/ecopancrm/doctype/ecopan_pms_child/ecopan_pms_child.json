@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-06 12:28:56.121558",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pms_reference",
+  "data_creazione",
+  "stato",
+  "descrizione"
+ ],
+ "fields": [
+  {
+   "fieldname": "pms_reference",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "PMS",
+   "options": "PMS"
+  },
+  {
+   "fieldname": "data_creazione",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Data Creazione"
+  },
+  {
+   "fieldname": "stato",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Stato",
+   "options": "Bozza\nAttivo\nCompletato"
+  },
+  {
+   "fieldname": "descrizione",
+   "fieldtype": "Small Text",
+   "label": "Descrizione"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-06-06 12:28:56.121558",
+ "modified_by": "Administrator",
+ "module": "EcopanCRM",
+ "name": "Ecopan PMS Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
