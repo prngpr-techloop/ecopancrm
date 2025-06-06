@@ -4,6 +4,17 @@
   "doctype": "Client Script",
   "dt": "Ecopan Customer",
   "enabled": 1,
+  "modified": "2025-06-06 15:57:20.775348",
+  "module": "EcopanCRM",
+  "name": "button_pms",
+  "script": "frappe.ui.form.on('Ecopan Customer', {\n    refresh: function(frm) {\n        if (!frm.doc.__islocal) {\n            setTimeout(function() {\n                add_pms_button_to_section(frm);\n            }, 1000);\n        }\n    }\n});\n\nfunction add_pms_button_to_section(frm) {\n    let pms_wrapper = frm.fields_dict.pms_list && frm.fields_dict.pms_list.$wrapper;\n    \n    if (pms_wrapper) {\n        pms_wrapper.find('.custom-add-pms-btn').remove();\n        \n        let table_wrapper = pms_wrapper.find('.form-grid');\n        \n        if (table_wrapper.length > 0) {\n            let button_html = `\n                <div class=\"custom-add-pms-btn\" style=\"margin-bottom: 15px;\">\n                    <button class=\"btn btn-primary btn-sm\" type=\"button\">\n                        <i class=\"fa fa-plus\"></i> Aggiungi PMS\n                    </button>\n                </div>\n            `;\n            \n            table_wrapper.before(button_html);\n            \n            pms_wrapper.find('.custom-add-pms-btn button').on('click', function() {\n                frappe.new_doc('PMS', {\n                    'customer_reference': frm.doc.name,\n                    'nome_cliente': frm.doc.nome_del_cliente || frm.doc.name\n                });\n            });\n        }\n    }\n}\n\nfrappe.ui.form.on('Ecopan Customer PMS List', {\n\trefresh(frm) {\n\t\t// your code here\n\t}\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Ecopan Customer",
+  "enabled": 1,
   "modified": "2025-03-08 15:36:48.416349",
   "module": "EcopanCRM",
   "name": "timePicker",

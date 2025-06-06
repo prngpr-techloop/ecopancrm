@@ -243,6 +243,8 @@ app_license = "mit"
 # }
 
 fixtures = [
+    {"dt": "Client Script", "filters": [["dt", "=", "PMS"]]},
+    {"dt": "Custom Field", "filters": [["dt", "=", "PMS"]]},
     {"doctype": "Custom Field", "filters": [["module", "=", "EcopanCRM"]]},
     {"doctype": "Property Setter", "filters": [["module", "=", "EcopanCRM"]]},
     {"doctype": "Client Script", "filters": [["module", "=", "EcopanCRM"]]},
