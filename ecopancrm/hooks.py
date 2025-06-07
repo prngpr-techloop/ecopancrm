@@ -243,23 +243,27 @@ app_license = "mit"
 # }
 
 fixtures = [
+    # === CUSTOMIZZAZIONI PMS (ESPORTA TUTTO) ===
+    # Esporta TUTTI i Custom Field (filtro vuoto)
+    {"dt": "Custom Field", "filters": []},
+    
+    # Child Table DocType  
+    {"dt": "DocType", "filters": [["name", "=", "Ecopan Customer PMS List"]]},
+    
+    # Client Script per PMS
     {"dt": "Client Script", "filters": [["dt", "=", "PMS"]]},
-    {"dt": "Custom Field", "filters": [["dt", "=", "PMS"]]},
-    {"doctype": "Custom Field", "filters": [["module", "=", "EcopanCRM"]]},
+    
+    # === FIXTURES ESISTENTI ===
     {"doctype": "Property Setter", "filters": [["module", "=", "EcopanCRM"]]},
-    {"doctype": "Client Script", "filters": [["module", "=", "EcopanCRM"]]},
     {"doctype": "Server Script", "filters": [["module", "=", "EcopanCRM"]]},
     {"doctype": "Workspace", "filters": [["module", "=", "EcopanCRM"]]},
-    # {"doctype": "Role", "filters": [["module", "=", "EcopanCRM"]]},
     {"doctype": "Custom DocPerm", "filters": [["parent", "like", "EcopanCRM%"]]},
     {"doctype": "Report", "filters": [["module", "=", "EcopanCRM"]]},
     {"doctype": "Dashboard", "filters": [["module", "=", "EcopanCRM"]]},
     {"doctype": "DocType", "filters": [["module", "=", "EcopanCRM"]]},
     {"doctype": "Module Def", "filters": [["name", "=", "EcopanCRM"]]},
     {"doctype": "Notification", "filters": [["module", "=", "EcopanCRM"]]},
-    # {"doctype": "Email Template", "filters": [["module", "=", "EcopanCRM"]]},
     {"doctype": "Print Format", "filters": [["module", "=", "EcopanCRM"]]},
-    # {"doctype": "Letter Head", "filters": [["module", "=", "EcopanCRM"]]},
     {"doctype": "Translation"}
 ]
 
